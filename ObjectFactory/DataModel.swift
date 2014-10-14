@@ -50,7 +50,8 @@ class Person : NSObject
 }
 
 /*
-The Friend class is a sample object implementation that inherits the Person class implementation.
+The Friend class is a sample object implementation that inherits 
+the Person class implementation.
 
 @version 1.0
 */
@@ -60,7 +61,8 @@ class Friend : Person
 }
 
 /*
-The Stranger class is a sample object implementation that inherits the Person class implementation.
+The Stranger class is a sample object implementation that inherits 
+the Person class implementation.
 
 @version 1.0
 */
