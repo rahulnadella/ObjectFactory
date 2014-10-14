@@ -22,48 +22,40 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
-ObjectFactoryTests.swift
+main.swift
 ObjectFactory
 
 Created by Rahul Nadella on 10/14/14.
 Copyright 2014 Rahul Nadella. All rights reserved.
 */
 
-import UIKit
-import XCTest
+let namespace = "ObjectFactory"
 
-/*
-The ObjectFactoryTests is unit test class to test the funcationality of ObjectFactory.
+typealias PersonFactory = ObjectFactory<Person>
 
-@version 1.0
-*/
-class ObjectFactoryTests: XCTestCase
+func createPersonWithClassName(
+    className: String!,
+    personName: String? = nil)
 {
-    override func setUp()
+    let qualifiedName = "\(namespace).\(className)"
+    if personName != nil
     {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown()
-    {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample()
-    {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
-    }
-    
-    func testPerformanceExample()
-    {
-        // This is an example of a performance test case.
-        self.measureBlock()
+        if let person = PersonFactory.createInstance(
+            className: qualifiedName,
+            initializer: "initWithName",
+            argument: personName!)
         {
-            // Put the code you want to measure the time of here.
+            println("\(className) name = \(person.name)");
         }
     }
-    
+    else
+    {
+        if let person = PersonFactory.createInstance(className: qualifiedName)
+        {
+            println("Created a \(className)");
+        }
+    }
 }
+
+createPersonWithClassName("Stranger")
+createPersonWithClassName("Friend", personName: "Steve")

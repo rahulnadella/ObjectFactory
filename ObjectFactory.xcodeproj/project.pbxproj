@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FCE4778619ED71EC00C50DED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE4778519ED71EC00C50DED /* AppDelegate.swift */; };
-		FCE4778819ED71EC00C50DED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE4778719ED71EC00C50DED /* ViewController.swift */; };
-		FCE4778B19ED71EC00C50DED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCE4778919ED71EC00C50DED /* Main.storyboard */; };
-		FCE4778D19ED71EC00C50DED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCE4778C19ED71EC00C50DED /* Images.xcassets */; };
-		FCE4779019ED71EC00C50DED /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCE4778E19ED71EC00C50DED /* LaunchScreen.xib */; };
 		FCE4779C19ED71EC00C50DED /* ObjectFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE4779B19ED71EC00C50DED /* ObjectFactoryTests.swift */; };
+		FCE477A619ED732F00C50DED /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE477A519ED732F00C50DED /* DataModel.swift */; };
+		FCE477A819ED74C400C50DED /* ObjectFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE477A719ED74C400C50DED /* ObjectFactory.swift */; };
+		FCE477AE19ED78B300C50DED /* CreateObjectFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE477AD19ED78B300C50DED /* CreateObjectFactory.m */; };
+		FCE477B219ED7A5E00C50DED /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE477B119ED7A5E00C50DED /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +27,15 @@
 /* Begin PBXFileReference section */
 		FCE4778019ED71EC00C50DED /* ObjectFactory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectFactory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCE4778419ED71EC00C50DED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FCE4778519ED71EC00C50DED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FCE4778719ED71EC00C50DED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FCE4778A19ED71EC00C50DED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FCE4778C19ED71EC00C50DED /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		FCE4778F19ED71EC00C50DED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		FCE4779519ED71EC00C50DED /* ObjectFactoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjectFactoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCE4779A19ED71EC00C50DED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCE4779B19ED71EC00C50DED /* ObjectFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectFactoryTests.swift; sourceTree = "<group>"; };
+		FCE477A519ED732F00C50DED /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		FCE477A719ED74C400C50DED /* ObjectFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectFactory.swift; sourceTree = "<group>"; };
+		FCE477AD19ED78B300C50DED /* CreateObjectFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateObjectFactory.m; sourceTree = "<group>"; };
+		FCE477AF19ED78E800C50DED /* CreateObjectFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateObjectFactory.h; sourceTree = "<group>"; };
+		FCE477B019ED79CB00C50DED /* ObjectFactory-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ObjectFactory-Bridging-Header.h"; sourceTree = "<group>"; };
+		FCE477B119ED7A5E00C50DED /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +77,12 @@
 		FCE4778219ED71EC00C50DED /* ObjectFactory */ = {
 			isa = PBXGroup;
 			children = (
-				FCE4778519ED71EC00C50DED /* AppDelegate.swift */,
-				FCE4778719ED71EC00C50DED /* ViewController.swift */,
-				FCE4778919ED71EC00C50DED /* Main.storyboard */,
-				FCE4778C19ED71EC00C50DED /* Images.xcassets */,
-				FCE4778E19ED71EC00C50DED /* LaunchScreen.xib */,
+				FCE477AF19ED78E800C50DED /* CreateObjectFactory.h */,
+				FCE477AD19ED78B300C50DED /* CreateObjectFactory.m */,
+				FCE477A519ED732F00C50DED /* DataModel.swift */,
+				FCE477A719ED74C400C50DED /* ObjectFactory.swift */,
+				FCE477B019ED79CB00C50DED /* ObjectFactory-Bridging-Header.h */,
+				FCE477B119ED7A5E00C50DED /* main.swift */,
 				FCE4778319ED71EC00C50DED /* Supporting Files */,
 			);
 			path = ObjectFactory;
@@ -161,6 +162,7 @@
 				TargetAttributes = {
 					FCE4777F19ED71EC00C50DED = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = 3T9G834Z4J;
 					};
 					FCE4779419ED71EC00C50DED = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -192,9 +194,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCE4778B19ED71EC00C50DED /* Main.storyboard in Resources */,
-				FCE4779019ED71EC00C50DED /* LaunchScreen.xib in Resources */,
-				FCE4778D19ED71EC00C50DED /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,8 +211,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCE4778819ED71EC00C50DED /* ViewController.swift in Sources */,
-				FCE4778619ED71EC00C50DED /* AppDelegate.swift in Sources */,
+				FCE477AE19ED78B300C50DED /* CreateObjectFactory.m in Sources */,
+				FCE477A619ED732F00C50DED /* DataModel.swift in Sources */,
+				FCE477B219ED7A5E00C50DED /* main.swift in Sources */,
+				FCE477A819ED74C400C50DED /* ObjectFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,25 +235,6 @@
 			targetProxy = FCE4779619ED71EC00C50DED /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		FCE4778919ED71EC00C50DED /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FCE4778A19ED71EC00C50DED /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		FCE4778E19ED71EC00C50DED /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FCE4778F19ED71EC00C50DED /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		FCE4779D19ED71EC00C50DED /* Debug */ = {
@@ -338,9 +320,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ObjectFactory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ObjectFactory/ObjectFactory-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -348,9 +334,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ObjectFactory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ObjectFactory/ObjectFactory-Bridging-Header.h";
 			};
 			name = Release;
 		};

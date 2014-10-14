@@ -22,48 +22,49 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
-ObjectFactoryTests.swift
+Person.swift
 ObjectFactory
 
 Created by Rahul Nadella on 10/14/14.
 Copyright 2014 Rahul Nadella. All rights reserved.
 */
 
-import UIKit
-import XCTest
-
+import Foundation
 /*
-The ObjectFactoryTests is unit test class to test the funcationality of ObjectFactory.
+The Person class is a sample object implementation.
 
 @version 1.0
 */
-class ObjectFactoryTests: XCTestCase
+class Person : NSObject
 {
-    override func setUp()
+    override init()
     {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        self.name = "?"
+    }
+    init(name: String)
+    {
+        self.name = name
     }
     
-    override func tearDown()
-    {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample()
-    {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
-    }
-    
-    func testPerformanceExample()
-    {
-        // This is an example of a performance test case.
-        self.measureBlock()
-        {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
+    var name: String
+}
+
+/*
+The Friend class is a sample object implementation that inherits the Person class implementation.
+
+@version 1.0
+*/
+class Friend : Person
+{
+    var nickname : String?
+}
+
+/*
+The Stranger class is a sample object implementation that inherits the Person class implementation.
+
+@version 1.0
+*/
+class Stranger : Person
+{
+    var seemsFriendly = false
 }
