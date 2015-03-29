@@ -6,6 +6,9 @@ Overview
 
 This project is an example implementation of creating objects in Swift using a bridging header file.  This project should be run from the command line.
 
+#####Version
+        Version 1.0 -> Design and Implementation of the ObjectFactory
+
 Usage
 --------
 The example shown below can be found in main.swift.
